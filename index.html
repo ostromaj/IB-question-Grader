@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <title>IB Computer Science Practice Lab</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">IB COMPUTER SCIENCE • PRACTICE LAB</p>
+      <h1>Practice like the examiner is watching.</h1>
+      <p class="lead">Choose a topic, answer an exam-style question, and get mark-by-mark feedback with strict, balanced, and generous interpretations.</p>
+      <div class="hero-actions">
+        <a class="primary-link" href="#practice">Start practicing</a>
+        <span class="pill">First assessment 2027</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="practice">
+    <section class="intro-grid">
+      <article class="mini-card"><strong>1</strong><span>Choose a CS topic</span></article>
+      <article class="mini-card"><strong>2</strong><span>Answer or draw</span></article>
+      <article class="mini-card"><strong>3</strong><span>See where every mark came from</span></article>
+    </section>
+
+    <section class="card controls">
+      <div class="field">
+        <label for="topic">Topic</label>
+        <select id="topic"></select>
+      </div>
+      <div class="field">
+        <label for="question">Question</label>
+        <select id="question"></select>
+      </div>
+    </section>
+
+    <section id="questionCard" class="card question-card">
+      <div class="question-meta">
+        <span id="topicBadge" class="badge"></span>
+        <span id="marksBadge" class="marks"></span>
+        <span id="commandBadge" class="command"></span>
+      </div>
+      <h2 id="questionText"></h2>
+      <p id="sourceNote" class="source"></p>
+    </section>
+
+    <section class="card response-card">
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="typed">Type answer</button>
+        <button class="tab" data-tab="draw">Draw answer</button>
+      </div>
+
+      <div id="typedPanel" class="panel active">
+        <label class="sr-only" for="answer">Your answer</label>
+        <textarea id="answer" placeholder="Write your exam answer here..."></textarea>
+      </div>
+
+      <div id="drawPanel" class="panel">
+        <p class="draw-help">Use this for diagrams, logic structures, trace work, or any response where drawing helps communicate your answer.</p>
+        <canvas id="drawingCanvas" width="1000" height="480"></canvas>
+        <div class="canvas-actions">
+          <button id="clearCanvas" class="secondary">Clear drawing</button>
+        </div>
+      </div>
+
+      <div class="submit-row">
+        <button id="submitBtn" class="primary">Grade my answer</button>
+        <span class="tiny">AI-assisted practice feedback — not an official IB mark.</span>
+      </div>
+    </section>
+
+    <section id="loading" class="card hidden status-card">
+      <div class="spinner"></div>
+      <div><h3>Checking the markscheme…</h3><p>Looking at each available mark separately.</p></div>
+    </section>
+
+    <section id="apiNotice" class="card notice hidden">
+      <h3>Practice site is live; AI grading still needs its secure backend connected.</h3>
+      <p>The public GitHub Pages site is working. Once the backend URL is deployed, grading will work without exposing an API key.</p>
+    </section>
+
+    <section id="results" class="hidden">
+      <div class="result-heading">
+        <div>
+          <p class="eyebrow dark">ESTIMATED IB-STYLE MARK</p>
+          <h2>Your grading range</h2>
+        </div>
+      </div>
+
+      <div class="score-grid">
+        <div class="score-card strict"><span>Strict</span><strong id="strictScore">—</strong><small>Only explicit credit</small></div>
+        <div class="score-card balanced featured"><span>Balanced</span><strong id="balancedScore">—</strong><small>Best examiner-style estimate</small></div>
+        <div class="score-card generous"><span>Generous</span><strong id="generousScore">—</strong><small>Reasonable implicit credit</small></div>
+      </div>
+
+      <div class="result-grid">
+        <section class="card">
+          <div class="section-title good"><span>✓</span><h2>Marks awarded</h2></div>
+          <div id="awarded"></div>
+        </section>
+        <section class="card">
+          <div class="section-title bad"><span>!</span><h2>Marks still available</h2></div>
+          <div id="missed"></div>
+        </section>
+      </div>
+
+      <section class="card feedback-card">
+        <h2>Examiner-style feedback</h2>
+        <p id="overall"></p>
+        <div class="improve-box">
+          <h3>How to gain more marks</h3>
+          <p id="improve"></p>
+        </div>
+        <p id="confidence" class="tiny"></p>
+        <button id="retryBtn" class="secondary">Improve my answer</button>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>IB Computer Science Practice Lab</strong>
+      <p>Independent practice tool. Not affiliated with or endorsed by the International Baccalaureate Organization.</p>
+    </div>
+  </footer>
+
+  <script src="./questions.js"></script>
+  <script src="./app-pages.js"></script>
+</body>
+</html>
