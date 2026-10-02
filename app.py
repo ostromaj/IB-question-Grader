@@ -66,7 +66,7 @@ Grade the response against each mark point. If a drawing image is supplied, inte
         content.append({"type":"input_image","image_url":drawing})
 
     resp = client.responses.create(
-        model=os.environ.get("OPENAI_MODEL","gpt-5-mini"),
+        model=os.environ.get("OPENAI_MODEL","gpt-6-luna"),
         input=[
             {"role":"system","content":[{"type":"input_text","text":system}]},
             {"role":"user","content":content}
