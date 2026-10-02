@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IB Computer Science Question Grader</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div>
+    <p class="eyebrow">IB COMPUTER SCIENCE • PRACTICE LAB</p>
+    <h1>Question Grader</h1>
+    <p class="sub">Practice an exam-style question, submit your answer, and see exactly where the marks come from.</p>
+  </div>
+</header>
+
+<main>
+  <section class="controls card">
+    <div class="field">
+      <label for="topic">1. Choose a topic</label>
+      <select id="topic"></select>
+    </div>
+    <div class="field">
+      <label for="question">2. Choose a question</label>
+      <select id="question"></select>
+    </div>
+  </section>
+
+  <section id="questionCard" class="card">
+    <div class="question-meta">
+      <span id="topicBadge" class="badge"></span>
+      <span id="marksBadge" class="marks"></span>
+      <span id="commandBadge" class="command"></span>
+    </div>
+    <h2 id="questionText"></h2>
+    <p id="sourceNote" class="source"></p>
+  </section>
+
+  <section class="card">
+    <div class="tabs">
+      <button class="tab active" data-tab="typed">Type answer</button>
+      <button class="tab" data-tab="draw">Draw answer</button>
+    </div>
+
+    <div id="typedPanel" class="panel active">
+      <textarea id="answer" placeholder="Write your exam answer here..."></textarea>
+    </div>
+
+    <div id="drawPanel" class="panel">
+      <canvas id="drawingCanvas" width="900" height="430"></canvas>
+      <div class="canvas-actions">
+        <button id="clearCanvas" class="secondary">Clear drawing</button>
+      </div>
+    </div>
+
+    <button id="submitBtn" class="primary">Grade my answer</button>
+    <p class="tiny">AI-assisted practice feedback. This is not an official IB grade.</p>
+  </section>
+
+  <section id="loading" class="card hidden"><h3>Marking your response…</h3><p>Checking each mark point against the practice markscheme.</p></section>
+
+  <section id="results" class="hidden">
+    <div class="score-grid">
+      <div class="score-card strict"><span>Strict</span><strong id="strictScore">—</strong></div>
+      <div class="score-card balanced"><span>Balanced</span><strong id="balancedScore">—</strong></div>
+      <div class="score-card generous"><span>Generous</span><strong id="generousScore">—</strong></div>
+    </div>
+
+    <div class="card">
+      <h2>Marks awarded</h2>
+      <div id="awarded"></div>
+    </div>
+    <div class="card">
+      <h2>Marks still available</h2>
+      <div id="missed"></div>
+    </div>
+    <div class="card">
+      <h2>Examiner-style feedback</h2>
+      <p id="overall"></p>
+      <h3>How to gain more marks</h3>
+      <p id="improve"></p>
+      <p id="confidence" class="tiny"></p>
+    </div>
+  </section>
+</main>
+
+<script>window.QUESTION_DATA = {{ questions|tojson }};</script>
+<script src="/static/app.js"></script>
+</body>
+</html>
