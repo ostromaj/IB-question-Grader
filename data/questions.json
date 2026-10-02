@@ -1,0 +1,291 @@
+[
+  {
+    "id": "a1-cache-4",
+    "topic": "A.1 Computer fundamentals",
+    "title": "Cache memory and processor performance",
+    "question": "Explain two ways in which cache memory can improve processor performance.",
+    "marks": 4,
+    "command_term": "Explain",
+    "source_note": "Original IB-style practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Cache stores frequently/recently used instructions or data close to the processor."
+      },
+      {
+        "mark": 2,
+        "point": "This reduces the need to access slower main memory."
+      },
+      {
+        "mark": 3,
+        "point": "A shorter access time reduces processor waiting/stalls."
+      },
+      {
+        "mark": 4,
+        "point": "This can increase instruction throughput / overall processing performance."
+      }
+    ]
+  },
+  {
+    "id": "a1-os-3",
+    "topic": "A.1 Computer fundamentals",
+    "title": "Operating system responsibilities",
+    "question": "Describe three functions of an operating system.",
+    "marks": 3,
+    "command_term": "Describe",
+    "source_note": "Original IB-style practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Manages processes/CPU scheduling."
+      },
+      {
+        "mark": 2,
+        "point": "Manages memory allocation and virtual memory."
+      },
+      {
+        "mark": 3,
+        "point": "Manages files/devices/user interaction/security; award any one valid distinct function for the third mark."
+      }
+    ]
+  },
+  {
+    "id": "a2-routing-4",
+    "topic": "A.2 Networks",
+    "title": "Packet routing",
+    "question": "Explain how packets can travel from a client device to a server across a network.",
+    "marks": 4,
+    "command_term": "Explain",
+    "source_note": "Original IB-style practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Data is divided into packets with addressing information."
+      },
+      {
+        "mark": 2,
+        "point": "Routers inspect destination information and select a next hop/path."
+      },
+      {
+        "mark": 3,
+        "point": "Different packets may take different routes."
+      },
+      {
+        "mark": 4,
+        "point": "Packets are reassembled/ordered at the destination and missing/corrupt data may be retransmitted where the protocol supports it."
+      }
+    ]
+  },
+  {
+    "id": "a3-db-4",
+    "topic": "A.3 Databases",
+    "title": "Primary and foreign keys",
+    "question": "Explain the role of primary keys and foreign keys in a relational database.",
+    "marks": 4,
+    "command_term": "Explain",
+    "source_note": "Original IB-style practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "A primary key uniquely identifies each record in a table."
+      },
+      {
+        "mark": 2,
+        "point": "Primary-key values must be unique (and normally non-null)."
+      },
+      {
+        "mark": 3,
+        "point": "A foreign key references a key in another/related table."
+      },
+      {
+        "mark": 4,
+        "point": "Foreign keys support relationships/referential integrity between tables."
+      }
+    ]
+  },
+  {
+    "id": "a4-overfit-4",
+    "topic": "A.4 Machine learning",
+    "title": "Overfitting",
+    "question": "Explain what overfitting is and describe one way it can be reduced when developing a machine-learning model.",
+    "marks": 4,
+    "command_term": "Explain / Describe",
+    "source_note": "Original question for new curriculum material. Machine learning is part of the first-assessment-2027 course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Overfitting occurs when a model learns training-data detail/noise too closely."
+      },
+      {
+        "mark": 2,
+        "point": "The model performs well on training data but generalizes poorly to unseen data."
+      },
+      {
+        "mark": 3,
+        "point": "Award for one valid mitigation such as regularization, simpler model, more representative training data, cross-validation, pruning, dropout, or early stopping."
+      },
+      {
+        "mark": 4,
+        "point": "Explains how the chosen mitigation improves generalization/reduces fitting to noise."
+      }
+    ]
+  },
+  {
+    "id": "a4-bias-4",
+    "topic": "A.4 Machine learning",
+    "title": "Bias in training data",
+    "question": "Explain two ways biased training data can affect a machine-learning system.",
+    "marks": 4,
+    "command_term": "Explain",
+    "source_note": "Original question for new curriculum material.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Training data can underrepresent/overrepresent groups or situations."
+      },
+      {
+        "mark": 2,
+        "point": "This can lead to systematically less accurate predictions for some groups/inputs."
+      },
+      {
+        "mark": 3,
+        "point": "Historical bias in labels/examples can be learned and reproduced by the model."
+      },
+      {
+        "mark": 4,
+        "point": "This can create unfair/discriminatory outcomes or unreliable decisions in deployment."
+      }
+    ]
+  },
+  {
+    "id": "b1-decomp-3",
+    "topic": "B.1 Computational thinking",
+    "title": "Decomposition",
+    "question": "Describe how decomposition can help solve a complex computational problem.",
+    "marks": 3,
+    "command_term": "Describe",
+    "source_note": "Original IB-style practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Breaks a complex problem into smaller subproblems/modules."
+      },
+      {
+        "mark": 2,
+        "point": "Each subproblem can be designed/tested/solved more independently."
+      },
+      {
+        "mark": 3,
+        "point": "Solutions can then be combined, improving manageability/reuse/debugging."
+      }
+    ]
+  },
+  {
+    "id": "b2-trace-4",
+    "topic": "B.2 Programming",
+    "title": "Trace an algorithm",
+    "question": "A program repeatedly checks each value in a list and keeps the largest value seen so far. Explain how this algorithm finds the maximum value and state one edge case that should be tested.",
+    "marks": 4,
+    "command_term": "Explain",
+    "source_note": "Original IB-style programming practice question; language-neutral for Java/Python preparation.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Initializes a current maximum from a valid list value."
+      },
+      {
+        "mark": 2,
+        "point": "Compares each subsequent item with the current maximum."
+      },
+      {
+        "mark": 3,
+        "point": "Updates the current maximum whenever a larger value is found and returns it after the traversal."
+      },
+      {
+        "mark": 4,
+        "point": "States one valid edge case such as a single-item list, all equal values, all negative values, or an empty list if the specification permits it."
+      }
+    ]
+  },
+  {
+    "id": "b2-debug-4",
+    "topic": "B.2 Programming",
+    "title": "Debugging strategy",
+    "question": "Explain two techniques a programmer can use to locate a logic error in a program.",
+    "marks": 4,
+    "command_term": "Explain",
+    "source_note": "Original IB-style programming practice question.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Identifies a valid technique such as trace table, debugger/breakpoint, logging, unit testing, or print tracing."
+      },
+      {
+        "mark": 2,
+        "point": "Explains how technique 1 reveals incorrect state/control flow/output."
+      },
+      {
+        "mark": 3,
+        "point": "Identifies a second distinct valid technique."
+      },
+      {
+        "mark": 4,
+        "point": "Explains how technique 2 helps isolate the source of the logic error."
+      }
+    ]
+  },
+  {
+    "id": "b3-encap-4",
+    "topic": "B.3 Object-oriented programming",
+    "title": "Encapsulation",
+    "question": "Explain how encapsulation can improve the design of an object-oriented program.",
+    "marks": 4,
+    "command_term": "Explain",
+    "source_note": "Original IB-style practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Encapsulation groups data/state with the methods that operate on it."
+      },
+      {
+        "mark": 2,
+        "point": "Internal representation can be hidden/restricted from direct external access."
+      },
+      {
+        "mark": 3,
+        "point": "Controlled interfaces/methods protect invariants or validate changes."
+      },
+      {
+        "mark": 4,
+        "point": "This reduces coupling and makes maintenance/testing/change safer."
+      }
+    ]
+  },
+  {
+    "id": "b4-stack-4",
+    "topic": "B.4 Abstract data types (HL)",
+    "title": "Stack operations",
+    "question": "Describe how a stack operates and explain one situation in which a stack is an appropriate data structure.",
+    "marks": 4,
+    "command_term": "Describe / Explain",
+    "source_note": "Original HL IB-style practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "A stack follows last-in, first-out (LIFO) ordering."
+      },
+      {
+        "mark": 2,
+        "point": "Push adds an item to the top and pop removes/returns the top item."
+      },
+      {
+        "mark": 3,
+        "point": "Provides a valid use such as function calls, undo history, expression evaluation, DFS, or browser back history."
+      },
+      {
+        "mark": 4,
+        "point": "Explains why LIFO behavior matches the chosen situation."
+      }
+    ]
+  }
+]
