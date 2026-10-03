@@ -1160,5 +1160,313 @@ window.QUESTION_DATA = [
         "point": "Extra memory is required for references/pointers and traversal can reduce performance."
       }
     ]
+  },
+  {
+    "id": "a1-xor-3",
+    "topic": "A.1 Computer fundamentals",
+    "title": "XOR gate",
+    "question": "Describe the function of an XOR gate and state the output when both inputs are 1.",
+    "marks": 3,
+    "command_term": "Describe",
+    "response_mode": "typed",
+    "source_note": "Original IB-style practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "XOR outputs 1 when the two inputs are different."
+      },
+      {
+        "mark": 2,
+        "point": "XOR outputs 0 when the two inputs are the same."
+      },
+      {
+        "mark": 3,
+        "point": "When both inputs are 1, the output is 0."
+      }
+    ]
+  },
+  {
+    "id": "a1-truthtable-4",
+    "topic": "A.1 Computer fundamentals",
+    "title": "Truth table reasoning",
+    "question": "A circuit has output Q = (A AND B) OR (NOT A). Determine Q for the four possible combinations of A and B and explain your reasoning.",
+    "marks": 4,
+    "command_term": "Determine / Explain",
+    "response_mode": "typed",
+    "source_note": "Original IB-style logic-gate practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "A=0, B=0 gives Q=1."
+      },
+      {
+        "mark": 2,
+        "point": "A=0, B=1 gives Q=1."
+      },
+      {
+        "mark": 3,
+        "point": "A=1, B=0 gives Q=0."
+      },
+      {
+        "mark": 4,
+        "point": "A=1, B=1 gives Q=1."
+      }
+    ]
+  },
+  {
+    "id": "a1-gateoutput-4",
+    "topic": "A.1 Computer fundamentals",
+    "title": "Logic circuit output",
+    "question": "A logic circuit first sends inputs A and B through an OR gate. The result then passes through a NOT gate. Explain what condition causes the final output to be 1.",
+    "marks": 4,
+    "command_term": "Explain",
+    "response_mode": "typed",
+    "source_note": "Original IB-style logic-gate practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "The OR gate outputs 1 if either input is 1."
+      },
+      {
+        "mark": 2,
+        "point": "The NOT gate inverts the OR output."
+      },
+      {
+        "mark": 3,
+        "point": "The final output is therefore 1 only when the OR output is 0."
+      },
+      {
+        "mark": 4,
+        "point": "This occurs only when A=0 and B=0."
+      }
+    ]
+  },
+  {
+    "id": "a1-drawgate-5",
+    "topic": "A.1 Computer fundamentals",
+    "title": "Draw a logic-gate circuit",
+    "question": "Draw a logic-gate circuit that produces output 1 only when A is 1 and B is 0. Label the inputs and output.",
+    "marks": 5,
+    "command_term": "Draw",
+    "response_mode": "drawing",
+    "source_note": "Original IB-style drawing practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Input B is inverted using a NOT gate."
+      },
+      {
+        "mark": 2,
+        "point": "Input A is used without inversion."
+      },
+      {
+        "mark": 3,
+        "point": "A and NOT B are connected to an AND gate."
+      },
+      {
+        "mark": 4,
+        "point": "The final output is 1 only for A=1 and B=0."
+      },
+      {
+        "mark": 5,
+        "point": "Inputs and output are clearly labelled and the circuit is logically complete."
+      }
+    ]
+  },
+  {
+    "id": "b1-flow-interpret-5",
+    "topic": "B.1 Computational thinking",
+    "title": "Interpret a flowchart",
+    "question": "A flowchart inputs a number N, sets total to 0, then repeats the following steps while N > 0: add N to total, subtract 1 from N. Explain what value the algorithm outputs when the original input is 4.",
+    "marks": 5,
+    "command_term": "Explain",
+    "response_mode": "typed",
+    "source_note": "Original IB-style flowchart interpretation practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Initial total is 0."
+      },
+      {
+        "mark": 2,
+        "point": "The values added are 4, 3, 2 and 1."
+      },
+      {
+        "mark": 3,
+        "point": "The loop stops when N reaches 0."
+      },
+      {
+        "mark": 4,
+        "point": "The final total is 10."
+      },
+      {
+        "mark": 5,
+        "point": "Explains that the algorithm computes the sum of the positive integers from the original N down to 1."
+      }
+    ]
+  },
+  {
+    "id": "b1-flow-error-4",
+    "topic": "B.1 Computational thinking",
+    "title": "Flowchart logic error",
+    "question": "A flowchart is intended to keep asking for a password until the correct password is entered, but its decision branch stops when the password is incorrect. Identify the logical error and explain how to correct it.",
+    "marks": 4,
+    "command_term": "Identify / Explain",
+    "response_mode": "typed",
+    "source_note": "Original IB-style flowchart debugging practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "The decision condition/branching logic is reversed or connected to the wrong outcome."
+      },
+      {
+        "mark": 2,
+        "point": "An incorrect password should loop back to the input step."
+      },
+      {
+        "mark": 3,
+        "point": "A correct password should follow the exit/success branch."
+      },
+      {
+        "mark": 4,
+        "point": "Explains that the corrected structure repeats until the password matches the expected value."
+      }
+    ]
+  },
+  {
+    "id": "b1-draw-flow-6",
+    "topic": "B.1 Computational thinking",
+    "title": "Draw a flowchart for maximum value",
+    "question": "Draw a flowchart for an algorithm that inputs five numbers and outputs the largest value entered.",
+    "marks": 6,
+    "command_term": "Draw",
+    "response_mode": "drawing",
+    "source_note": "Original IB-style flowchart design practice question aligned to the first-assessment-2027 Computer Science course.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Initializes the current maximum from a valid input value."
+      },
+      {
+        "mark": 2,
+        "point": "Uses a loop or repeated structure to process all five numbers."
+      },
+      {
+        "mark": 3,
+        "point": "Compares each new number with the current maximum."
+      },
+      {
+        "mark": 4,
+        "point": "Updates the current maximum when a larger value is found."
+      },
+      {
+        "mark": 5,
+        "point": "Outputs the maximum after all five inputs are processed."
+      },
+      {
+        "mark": 6,
+        "point": "Uses clear flowchart structure/symbols and correct control flow."
+      }
+    ]
+  },
+  {
+    "id": "b2-trace-loop-5",
+    "topic": "B.2 Programming",
+    "title": "Trace a loop",
+    "question": "Trace the following algorithm for x = 3: set total = 1; while x > 0, set total = total * 2 and then set x = x - 1. State the final value of total and explain how it changes during the loop.",
+    "marks": 5,
+    "command_term": "Trace / Explain",
+    "response_mode": "typed",
+    "source_note": "Original IB-style algorithm tracing practice question for Java/Python preparation.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "Initial total is 1 and x is 3."
+      },
+      {
+        "mark": 2,
+        "point": "After first iteration total=2 and x=2."
+      },
+      {
+        "mark": 3,
+        "point": "After second iteration total=4 and x=1."
+      },
+      {
+        "mark": 4,
+        "point": "After third iteration total=8 and x=0."
+      },
+      {
+        "mark": 5,
+        "point": "The final value of total is 8 and the loop terminates when x is no longer greater than 0."
+      }
+    ]
+  },
+  {
+    "id": "b2-trace-branch-5",
+    "topic": "B.2 Programming",
+    "title": "Trace selection and accumulation",
+    "question": "An algorithm processes the list [3, 8, 5, 10]. It sets count = 0 and, for each value, increases count by 1 only if the value is even. Trace the algorithm and state the final value of count.",
+    "marks": 5,
+    "command_term": "Trace",
+    "response_mode": "typed",
+    "source_note": "Original IB-style algorithm tracing practice question for Java/Python preparation.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "3 is odd, so count remains 0."
+      },
+      {
+        "mark": 2,
+        "point": "8 is even, so count becomes 1."
+      },
+      {
+        "mark": 3,
+        "point": "5 is odd, so count remains 1."
+      },
+      {
+        "mark": 4,
+        "point": "10 is even, so count becomes 2."
+      },
+      {
+        "mark": 5,
+        "point": "The final value of count is 2."
+      }
+    ]
+  },
+  {
+    "id": "b2-trace-bug-6",
+    "topic": "B.2 Programming",
+    "title": "Trace and find a bug",
+    "question": "A program is intended to find the smallest value in a list. It sets minimum = 0 before checking the list [4, 7, 2, 9]. Trace the program's comparisons and explain why the initialization can cause an incorrect result. State a better initialization.",
+    "marks": 6,
+    "command_term": "Trace / Explain",
+    "response_mode": "typed",
+    "source_note": "Original IB-style debugging and tracing practice question for Java/Python preparation.",
+    "markscheme": [
+      {
+        "mark": 1,
+        "point": "The initial minimum is 0."
+      },
+      {
+        "mark": 2,
+        "point": "Each list value 4, 7, 2 and 9 is greater than 0."
+      },
+      {
+        "mark": 3,
+        "point": "The minimum therefore incorrectly remains 0."
+      },
+      {
+        "mark": 4,
+        "point": "0 was not actually present in the list, so the result is invalid."
+      },
+      {
+        "mark": 5,
+        "point": "A better initialization is the first element of the list, here 4."
+      },
+      {
+        "mark": 6,
+        "point": "Explains that subsequent values can then be compared against an actual list value to determine the true minimum, which is 2."
+      }
+    ]
   }
 ];
